@@ -1,12 +1,7 @@
 var myApp = angular.module("myApp", []);
 
-myApp.controller("mainController", ['$scope', '$filter', '$http', function($scope, $filter, $http) {
+myApp.controller("mainController", ['$scope', '$location', '$log', function($scope, $location, $log) {
 
-    $scope.alertClick = function() {
-        alert("You've clicked!");
-    };
-
-    $scope.name = "Freshco Da Flowa"
+    $log.info($location.path());
 
 }]);
-
